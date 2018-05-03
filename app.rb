@@ -30,8 +30,32 @@ end
 #templating engine that comes with RUby
 get '/template' do
   #specifiy templating name with a SYMBOL
+  #this is like res.render in Express
   erb :index
 end
 
 #partials are included in a "layout.erb" HAS TO BE CALLED THAT view
 #via the yield statement!!!
+
+
+#Passing data to our template
+get '/friendster' do
+  #pass any instance variables you declare will be passed to the templating engine
+  @page_title = "Some friends of mine"
+  @message = "Thanks for using Friendster 2.0 these are ur friends"
+  @friends = [
+    {
+      name: "Zoe",
+      hair: "blonde"
+    },
+    {
+      name: "Irwin",
+      hair: "hat on"
+    },
+    {
+      name: "MJ",
+      hair: "brown"
+    }
+  ]
+  erb :friends
+end

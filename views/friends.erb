@@ -1,0 +1,7 @@
+<h5><%= @message %></h5>
+<ul>
+  <% @friends.each do |friend| %>
+    <li><%= friend[:name] %> (<%= friend[:hair]%>)</li>
+  <% end %>
+
+</ul>
