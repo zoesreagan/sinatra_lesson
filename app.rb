@@ -24,3 +24,11 @@ get '/hello/:some_param' do
   "hello #{the_param}"
 
 end
+
+#render a template
+#create an .erb file (like ejs)
+#templating engine that comes with RUby
+get '/template' do
+  #specifiy templating name with a SYMBOL
+  erb :index
+end
