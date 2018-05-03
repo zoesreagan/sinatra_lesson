@@ -32,3 +32,6 @@ get '/template' do
   #specifiy templating name with a SYMBOL
   erb :index
 end
+
+#partials are included in a "layout.erb" HAS TO BE CALLED THAT view
+#via the yield statement!!!
